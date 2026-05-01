@@ -1,20 +1,23 @@
 {
-  "name": "amdox-erp",
+  "name": "frontend",
   "private": true,
   "version": "1.0.0",
-  "workspaces": [
-    "frontend",
-    "backend"
-  ],
+  "type": "module",
+
   "scripts": {
-    "install:all": "npm install --workspaces",
-    "dev": "concurrently \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
-    "frontend": "npm run dev --workspace frontend",
-    "backend": "npm run dev --workspace backend",
-    "build": "npm run build --workspace frontend && npm run build --workspace backend",
-    "start": "npm run start --workspace backend"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
+
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.3"
+  },
+
   "devDependencies": {
-    "concurrently": "^9.0.1"
+    "vite": "^5.4.0",
+    "@vitejs/plugin-react": "^4.3.1"
   }
 }
